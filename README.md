@@ -28,6 +28,7 @@ Webpack loader for creating SVG sprites.
     - [`publicPath`](#public-path)
     - [`plainSprite`](#plain-sprite)
     - [`spriteAttrs`](#sprite-attrs)
+    - [`chunkId`](#chunk-id)
 - [Examples](#examples)
 - [Contributing guidelines](#contributing-guidelines)
 - [License](#license)
@@ -282,6 +283,22 @@ Sprite `<svg>` tag attributes can be specified via `spriteAttrs` plugin option:
       }
     })
   ]
+}
+```
+
+<a id="chunk-id"></a>
+### `chunkId` (type: `string`, default: `null`)
+
+Custom chunk ID for webpack, fill in when needed.
+
+```js
+{
+  test: /\.svg$/,
+  loader: 'svg-sprite-loader',
+  options: {
+    extract: true,
+    chunkId: 'my-special-id'
+  }
 }
 ```
 
